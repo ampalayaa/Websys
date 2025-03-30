@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const blogContainer = document.getElementById("more-blog-posts");
 
-    fetch("https://dev.to/api/articles?per_page=20")
+    fetch("https://dev.to/api/articles?per_page=30")
         .then(response => response.json())
         .then(posts => {
             const filteredPosts = posts.filter(post => post.cover_image);
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const shownBlogIds = JSON.parse(localStorage.getItem("shownBlogs")) || [];
 
             // Filter out already displayed blogs
-            const newPosts = filteredPosts.filter(post => !shownBlogIds.includes(post.id)).slice(0, 10);
+            const newPosts = filteredPosts.filter(post => !shownBlogIds.includes(post.id)).slice(0, 30);
 
             newPosts.forEach(post => {
                 const postHTML = `
