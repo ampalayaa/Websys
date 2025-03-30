@@ -1,28 +1,30 @@
-document.getElementById("register-form").addEventListener("submit", function(event) {
-  event.preventDefault();
+// auth.js - User Registration
 
-  let email = document.getElementById("email").value;
-  let password = document.getElementById("password").value;
-  let confirmPassword = document.getElementById("confirm-password").value;
-  let termsChecked = document.getElementById("terms-and-condition").checked;
-  let messageBox = document.getElementById("message-box");
+// Register a new user
+function registerUser(event) {
+    event.preventDefault();
+    let username = document.getElementById("username").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirm-password").value;
+    let dob = document.getElementById("dob").value;
+    let gender = document.querySelector("input[name='gender']:checked").value;
 
-  messageBox.innerHTML = ""; // Clear previous messages
+    if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+    }
+    
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    if (users.some(user => user.email === email)) {
+        alert("Email already registered!");
+        return;
+    }
+    
+    users.push({ username, email, password, dob, gender });
+    localStorage.setItem("users", JSON.stringify(users));
+    alert("Registration successful! Redirecting to login...");
+    window.location.href = "login.html";
+}
 
-  if (password !== confirmPassword) {
-      messageBox.innerHTML = "Passwords do not match!";
-      return;
-  }
-
-  if (!termsChecked) {
-      messageBox.innerHTML = "You must agree to the terms and conditions.";
-      return;
-  }
-
-  let user = { email, password };
-  localStorage.setItem("user", JSON.stringify(user));
-  messageBox.innerHTML = "Registration successful! Redirecting to login page...";
-  setTimeout(() => {
-    window.location.href = "../../login.html"; // Ensure this path is correct
-  }, 1000); // Redirect after 1 second
-});
+document.getElementById("register-form").addEventListener("submit", registerUser);

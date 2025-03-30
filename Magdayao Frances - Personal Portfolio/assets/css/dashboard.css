@@ -107,6 +107,33 @@ nav.sticky .menu-btn{
 .navbar .menu .menu-btn{
   color: #fff;
 }
+
+/* Adjust profile icon size */
+.profile-icon {
+  font-size: 28px; /* Make the icon more noticeable */
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.profile-icon:hover {
+  color: #ff4d4d; /* Highlight on hover */
+}
+/* Make the logout button more noticeable */
+.btn-primary {
+  background-color: #ff4d4d; /* Red color for visibility */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #cc0000; /* Darker red on hover */
+}
+
 .quiz-section .quiz-container {
   background: #fff;
   padding: 20px;
@@ -415,6 +442,22 @@ section .button button:hover{
   color: #4070f4;
 }
 /* My Services CSS */
+/* Center the service icons */
+.services .box .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  margin: 0 auto 10px;
+}
+
+.services .box .icon i {
+  font-size: 36px;
+  color: #333;
+}
 .services .boxes{
   display: flex;
   flex-wrap: wrap;
@@ -459,6 +502,7 @@ section .button button:hover{
 .services .boxes .box:hover p{
   color: #000000;
 }
+
 /* Contact Section */
 .contact {
   background: #F0F8FF;

@@ -1,20 +1,17 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Load saved data from LocalStorage
-    document.getElementById("name").value = localStorage.getItem("userName") || "";
-    document.getElementById("email").value = localStorage.getItem("userEmail") || "";
+document.addEventListener("DOMContentLoaded", function () {
+    let user = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (!user) {
+        alert("No user found!");
+        return;
+    }
+    document.getElementById("name").value = user.username;
+    document.getElementById("email").value = user.email;
 });
 
 function saveProfile() {
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-
-    if (name === "" || email === "") {
-        alert("Please fill in all fields.");
-        return;
-    }
-
-    localStorage.setItem("userName", name);
-    localStorage.setItem("userEmail", email);
-
-    alert("Profile updated successfully!");
+    let newName = document.getElementById("name").value;
+    let user = JSON.parse(localStorage.getItem("loggedInUser"));
+    user.username = newName;
+    localStorage.setItem("loggedInUser", JSON.stringify(user));
+    alert("Profile updated!");
 }

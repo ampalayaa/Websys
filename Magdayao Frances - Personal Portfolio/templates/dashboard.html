@@ -1,8 +1,9 @@
 <script>
-  if (!localStorage.getItem("loggedIn")) {
-    window.location.href = "index.html"; // Redirect back to login
+  if (!localStorage.getItem("loggedInUser")) {
+    alert("You must log in first!");
+    window.location.href = "login.html";
   }
-</script> 
+</script>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -20,7 +21,6 @@
       <div class="navbar">
         <div class="logo"><a href="#">Portfolio.</a></div>
         <ul class="menu">
-          <li><a href="#" onclick="logoutUser()">Logout</a></li>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -34,6 +34,9 @@
           <div class="cancel-btn">
             <i class="fas fa-times"></i>
           </div>
+        </ul>
+        <ul>
+            <a href="../../index.html" onclick="logoutUser(event)" class="btn btn-primary">Logout</a>
         </ul>
       </div>
       <div class="menu-btn">
@@ -211,6 +214,15 @@
       </div>
     </section>
 
+    <section id="blog" class="blog">
+      <div class="content">
+          <div class="title"><span>Latest Blogs</span></div>
+          <div id="blog-post" class="blog-posts">
+              <!-- Blog posts will be inserted here by blog.js -->
+          </div>
+      </div>
+    </section>
+
     <section id="contact" class="contact">
         <div class="content">
             <div class="title"><span>Contact Me</span></div>
@@ -251,6 +263,8 @@
             <p>&copy; 2023 Frances Bea. All rights reserved.</p>
         </div>
     </footer>
-    <script src="assets/js/navbar.js"></script>
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/blog.js"></script>
+    <script src="../assets/js/profile.js"></script>
   </body>
 </html>

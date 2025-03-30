@@ -12,3 +12,13 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+function logoutUser(event) {
+  event.preventDefault(); // Stop the default link behavior
+
+  // Clear login status
+  localStorage.removeItem("loggedIn");
+  localStorage.removeItem("currentUser");
+
+  alert("Logged out successfully!");
+  window.location.href = "../../index.html"; // Redirect after logout
+}
