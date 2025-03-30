@@ -20,7 +20,7 @@ function logoutUser(event) {
   localStorage.removeItem("currentUser");
 
   alert("Logged out successfully!");
-  window.location.href = "../../index.html"; // Redirect after logout
+  window.location.href = "index.html"; // Redirect after logout
 }
 
 function updateText(slideNumber) {
