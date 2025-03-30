@@ -91,6 +91,8 @@ const quizContainer = document.getElementById('quiz-container');
 const resultContainer = document.getElementById('result-container');
 const finalScoreEl = document.getElementById('final-score');
 const restartBtn = document.getElementById('restart-btn');
+let highScore = localStorage.getItem('highScore') ? JSON.parse(localStorage.getItem('highScore')) : { score: 0, time: '' };
+
 
 function startQuiz() {
     currentQuestionIndex = 0;
@@ -159,14 +161,33 @@ function selectAnswer(selectedOption, buttonElement) {
     }, 2000); // 2-second delay for feedback
 }
 
+function displayHighScore() {
+    const highscoreEl = document.getElementById('highscore');
+    if (highScore.score > 0) {
+        highscoreEl.textContent = `Score: ${highScore.score} (Achieved on: ${highScore.time})`;
+    } else {
+        highscoreEl.textContent = 'No highscore yet';
+    }
+}
+function updateHighScore() {
+    const currentTime = new Date().toLocaleString(); // Get the current date and time
+    if (score > highScore.score) {
+        highScore = { score: score, time: currentTime };
+        localStorage.setItem('highScore', JSON.stringify(highScore));
+        displayHighScore(); // Update the displayed high score
+    }
+}
+
 function endQuiz() {
     quizContainer.classList.add('d-none');
     resultContainer.classList.remove('d-none');
     finalScoreEl.textContent = `Your final score is ${score} out of ${questions.length}.`;
+
+    updateHighScore(); // Update high score if necessary
+
     localStorage.setItem('quizScore', score);
 }
 
-restartBtn.onclick = startQuiz;
-
-// Initialize the quiz
+// Initialize the quiz and display the highest score
 startQuiz();
+displayHighScore();

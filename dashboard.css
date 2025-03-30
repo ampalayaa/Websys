@@ -550,6 +550,11 @@ section .button button:hover{
   display: -webkit-box;
   -webkit-line-clamp: 3; /* Show max 3 lines */
   -webkit-box-orient: vertical;
+  text-align: center;
+}
+
+.p {
+  text-align: center;
 }
 
 /* Ensure button stays at the bottom */
