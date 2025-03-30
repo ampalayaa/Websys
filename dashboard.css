@@ -142,7 +142,7 @@ nav.sticky .menu-btn{
   max-width: 900px; 
   margin: 0 auto; 
   background-image: url(landing.gif);
-  background-size: cover; /* Covers entire div */
+  background-size: auto; /* Covers entire div */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents repeating */
   color: white;
