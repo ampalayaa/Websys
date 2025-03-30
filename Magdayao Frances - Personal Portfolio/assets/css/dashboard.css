@@ -61,7 +61,7 @@ nav .navbar .menu li{
 nav .navbar .menu a {
   font-size: 18px;
   font-weight: 500;
-  color: #ffffff;
+  color: #4070f4;
   padding: 10px 20px; /* Add padding inside the nav items */
   border: 2px solid transparent; /* Default no border */
   border-radius: 6px; /* Rounded corners */
@@ -139,9 +139,12 @@ nav.sticky .menu-btn{
   padding: 20px;
   border-radius: 10px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.824);
-  max-width: 600px; 
+  max-width: 900px; 
   margin: 0 auto; 
   background-image: url(../images/landing.gif);
+  background-size: cover; /* Covers entire div */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
   color: white;
 }
 .quiz-section .content {
@@ -282,7 +285,7 @@ section .title span::after{
 
 /* Image Slider Container */
 .image-slider {
-  width: 380px;
+  width: 375px;
   height: 400px;
   position: relative;
   overflow: hidden;

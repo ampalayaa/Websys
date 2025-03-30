@@ -12,7 +12,7 @@ document.getElementById("login-form").addEventListener("submit", function(event)
     
     if (user) {
         messageBox.innerHTML = "Login successful! Redirecting to dashboard...";
-        localStorage.setItem("loggedIn", "true");
+        localStorage.setItem("loggedInUser", JSON.stringify(user));
         setTimeout(() => {
             window.location.href = "dashboard.html";
         }, 1000);

@@ -21,8 +21,10 @@ function registerUser(event) {
         return;
     }
     
-    users.push({ username, email, password, dob, gender });
+    let newUser = { username, email, password, dob, gender };
+    users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
+    localStorage.setItem("loggedInUser", JSON.stringify(newUser));
     alert("Registration successful! Redirecting to login...");
     window.location.href = "login.html";
 }

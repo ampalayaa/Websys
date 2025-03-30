@@ -10,7 +10,7 @@
     <meta charset="UTF-8" />
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="../assets/css/dashboard.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
@@ -62,7 +62,7 @@
           <div class="title"><span>Interactive Quiz</span></div>
           <p>Here you can test your knowledge </p>
           <div class="button">
-            <a href="quiz.html"><button>Take the Quiz</button></a>
+            <a href="Interactive_Quizzes.html"><button>Take the Quiz</button></a>
           </div>
         </div>
       </div>
@@ -73,27 +73,17 @@
         <div class="about-details">
           <div class="left image-slider">
             <div class="slides">
-              <input type="radio" name="slide" id="slide1" checked>
-              <input type="radio" name="slide" id="slide2">
-              <input type="radio" name="slide" id="slide3">
-              <input type="radio" name="slide" id="slide4">
-              <input type="radio" name="slide" id="slide5">
+              <input type="radio" name="slide" id="slide1" checked onchange="updateText(1)">
+              <input type="radio" name="slide" id="slide2" onchange="updateText(2)">
+              <input type="radio" name="slide" id="slide3" onchange="updateText(3)">
+              <input type="radio" name="slide" id="slide4" onchange="updateText(4)">
+              <input type="radio" name="slide" id="slide5" onchange="updateText(5)">
               <div class="image-track">
-                <div class="slide">
-                  <img src="../assets/images/frisbee.png" alt="Image 1">
-                </div>
-                <div class="slide">
-                  <img src="../assets/images/image.png" alt="Image 2">
-                </div>
-                <div class="slide">
-                  <img src="../assets/images/Me1.png" alt="Image 3">
-                </div>
-                <div class="slide">
-                  <img src="../assets/images/Me2.png" alt="Image 4">
-                </div>
-                <div class="slide">
-                  <img src="../assets/images/MyImage.png" alt="Image 5">
-                </div>
+                <div class="slide"><img src="../assets/images/family.jpg" alt="Family"></div>
+                <div class="slide"><img src="../assets/images/friends.jpg" alt="Friends"></div>
+                <div class="slide"><img src="../assets/images/frisbee.png" alt="Frisbee"></div>
+                <div class="slide"><img src="../assets/images/gala.jpg" alt="Gala"></div>
+                <div class="slide"><img src="../assets/images/image.png" alt="Me"></div>
               </div>
             </div>
             <div class="navigation">
@@ -105,15 +95,10 @@
             </div>
           </div>
           <div class="right">
-            <div class="topic">Designing Is My Passion</div>
-            <p>
-              From the moment I discovered design, I knew it was more than just creating—it was about bringing ideas to life. I’ve always been fascinated by how colors, typography, and composition can shape emotions and tell powerful stories. What started as a hobby quickly turned into an obsession, where every project became an opportunity to express creativity.
-              For me, design is about connection—capturing a vision and making it visually impactful. Whether it's branding, UI/UX, or digital art, I love blending aesthetics with functionality. Every design tells a story, and I strive to craft experiences that are both meaningful and memorable.
-              But creativity never stops evolving. I embrace challenges, continuously learning and refining my craft. Design isn’t just my passion—it’s the way I see the world.
+            <div class="topic" id="topic">Designing Is My Passion</div>
+            <p id="description">
+              I am Frances Bea Magdayao, the youngest, the bunso, the last puzzle piece in a family that shaped who I am. My two kuyas carved their own paths, and I watched, learning from their every move. But me? I was different. While they chased their own dreams, I found solace in creativity, in colors, in designs that spoke louder than words. They say being the youngest means being protected, but in my case, it meant finding my own way. And in that journey, I discovered that design wasn’t just an interest—it was the language my heart spoke before I even knew how to put it into words.
             </p>
-            <div class="button">
-              <button>Download CV</button>
-            </div>
           </div>
         </div>
       </div>
@@ -138,11 +123,11 @@
           <div class="boxes">
             <div class="box">
               <div class="topic">HTML</div>
-              <div class="per">80%</div>
+              <div class="per">55%</div>
             </div>
             <div class="box">
               <div class="topic">CSS</div>
-              <div class="per">88%</div>
+              <div class="per">45%</div>
             </div>
             <div class="box">
               <div class="topic">JavScript</div>
@@ -150,7 +135,7 @@
             </div>
             <div class="box">
               <div class="topic">PHP</div>
-              <div class="per">45%</div>
+              <div class="per">30%</div>
             </div>
           </div>
         </div>
@@ -180,34 +165,10 @@
 
           <div class="box">
             <div class="icon">
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <div class="topic">Digital Marketing</div>
-            <p>Crafting digital strategies, SEO optimization, and social media campaigns to grow your online presence and drive engagement with your audience.</p>
-          </div>
-
-          <div class="box">
-            <div class="icon">
               <i class="fab fa-android"></i>
             </div>
             <div class="topic">Icon Design</div>
             <p>Designing unique and recognizable icons that enhance usability and visual appeal for apps, websites, and digital products.</p>
-          </div>
-
-          <div class="box">
-            <div class="icon">
-              <i class="fas fa-camera-retro"></i>
-            </div>
-            <div class="topic">Photography</div>
-            <p>Capturing high-quality images for personal, business, or marketing purposes, bringing visual stories to life with creative composition.</p>
-          </div>
-
-          <div class="box">
-            <div class="icon">
-              <i class="fas fa-tablet-alt"></i>
-            </div>
-            <div class="topic">App Development</div>
-            <p>Developing intuitive and scalable mobile applications, ensuring smooth functionality and an engaging user experience across devices.</p>
           </div>
 
         </div>
@@ -221,7 +182,7 @@
               <!-- Blog posts will be inserted here by blog.js -->
           </div>
       </div>
-    </section>
+  </section>
 
     <section id="contact" class="contact">
         <div class="content">
@@ -245,16 +206,16 @@
     
             <!-- Contact Links -->
             <div class="contact-links">
-                <a href="https://www.facebook.com/bea.magdayao.2024/" target="_blank" class="contact-link">
-                    <i class="fab fa-facebook"></i> Facebook
-                </a>
-                <a href="mailto:your.magdayaofrances@gmail.com" target="_blank" class="contact-link">
-                    <i class="fas fa-envelope"></i> Email
-                </a>
-                <a href="https://github.com/ampalayaa" target="_blank" class="contact-link">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-            </div>
+              <a href="https://www.facebook.com/bea.magdayao.2024/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                  <i class="fab fa-facebook"></i> Facebook
+              </a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=your.magdayaofrances@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-link">
+                <i class="fas fa-envelope"></i> Email
+              </a>
+              <a href="https://github.com/ampalayaa" target="_blank" rel="noopener noreferrer" class="contact-link">
+                  <i class="fab fa-github"></i> GitHub
+              </a>
+          </div>
         </div>
     </section>
     <!-- Footer Section Start -->
