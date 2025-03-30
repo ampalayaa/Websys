@@ -14,7 +14,18 @@ body::before {
     z-index: -1; /* Ensures the overlay is behind content */
 }
 
+
+
 .quizzes .title {
+    text-align: center;
+    font-size: 3.5em;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: #00035b;
+}
+
+.container .title {
+    text-align: center;
     text-align: center;
     font-size: 3.5em;
     font-weight: bolder;
@@ -56,12 +67,12 @@ body::before {
     background-position: center;
 }
 
-.box.html-css { background-image: url('../images/jellyfish-party.gif'); }
-.box.javascript { background-image: url('../images/ocean.gif'); }
-.box.database { background-image: url('../images/sea-wave.gif'); }
-.box.mobile-dev { background-image: url('../images/ocean-relief-beautiful.gif'); }
-.box.networking { background-image: url('../images/fish-sea.gif'); }
-.box.machine-learning { background-image: url('../images/ocean-light.gif'); }
+.box.html-css { background-image: url('jellyfish-party.gif'); }
+.box.javascript { background-image: url('ocean.gif'); }
+.box.database { background-image: url('sea-wave.gif'); }
+.box.mobile-dev { background-image: url('ocean-relief-beautiful.gif'); }
+.box.networking { background-image: url('fish-sea.gif'); }
+.box.machine-learning { background-image: url('ocean-light.gif'); }
 
 .quizzes .boxes .box .icon {
     display: flex;
