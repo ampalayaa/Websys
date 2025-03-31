@@ -22,7 +22,8 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #4070f4;
 }
-/* navbar styling */
+
+/* navbar section */
 nav{
   position: fixed;
   width: 100%;
@@ -68,15 +69,15 @@ nav .navbar .menu a {
   font-size: 18px;
   font-weight: 500;
   color: #4070f4;
-  padding: 10px 20px; /* Add padding inside the nav items */
-  border: 2px solid transparent; /* Default no border */
-  border-radius: 6px; /* Rounded corners */
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 6px;
   transition: all 0.3s ease-in-out;
 }
 .navbar .menu a:hover {
   color: #4070f4;
-  border-color: #4070f4; /* Border appears on hover */
-  background-color: rgba(64, 112, 244, 0.1); /* Light background effect */
+  border-color: #4070f4;
+  background-color: rgba(64, 112, 244, 0.1);
 }
 nav.sticky .menu a{
   color: #FFF;
@@ -92,7 +93,7 @@ nav.sticky .menu a:hover{
 nav.sticky .media-icons a{
   color: #FFF;
 }
-/* Side Navigation Menu Button CSS */
+/* Navbar Collapse Sidebar */
 nav .menu-btn,
 .navbar .menu .cancel-btn{
   position: absolute;
@@ -113,20 +114,16 @@ nav.sticky .menu-btn{
 .navbar .menu .menu-btn{
   color: #fff;
 }
-
-/* Adjust profile icon size */
 .profile-icon {
-  font-size: 28px; /* Make the icon more noticeable */
+  font-size: 30px;
   color: #333;
   transition: color 0.3s ease;
 }
-
 .profile-icon:hover {
-  color: #ff4d4d; /* Highlight on hover */
+  color: #ff4d4d;
 }
-/* Make the logout button more noticeable */
 .btn-primary {
-  background-color: #ff4d4d; /* Red color for visibility */
+  background-color: #ff4d4d;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -135,35 +132,127 @@ nav.sticky .menu-btn{
   text-transform: uppercase;
   transition: background-color 0.3s ease;
 }
-
 .btn-primary:hover {
-  background-color: #cc0000; /* Darker red on hover */
+  background-color: #cc0000;
 }
 
-.quiz-section .quiz-container {
+/* Project Section */
+.project{
+  padding: 40px 0;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+.project .quiz-box {
   background: #fff;
   padding: 20px;
   border-radius: 10px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.824);
+  box-shadow: 0 4px 8px rgba(4, 0, 58, 0.824);
   max-width: 900px; 
   margin: 0 auto; 
-  background-image: url(landing.gif);
-  background-size: cover; /* Covers entire div */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents repeating */
+  background-image: url(../images/landing.gif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
 }
-.quiz-section .content {
+.project .quiz-content {
   text-align: center;
 }
-.quiz-section .title span {
+.quiz-content .title span {
   color: white;
 }
-/* home section styling */
+
+/* Blog Section */
+.blog-posts {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.card {
+  width: 300px;
+  height: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.card-text {
+  flex-grow: 1;
+  font-size: 1em;
+  color: #444;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-align: center;
+}
+
+.p {
+  text-align: center;
+}
+
+.see-more-container {
+  margin-top: auto;
+  text-align: center;
+}
+
+.see-more-btn {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background: #0056b3;
+}
+
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.go-back-btn {
+  background: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.go-back-btn:hover {
+  background: #b52b3a;
+}
+
+/* home section */
 .home {
   height: 100vh;
-  width: 100%; /* Use full width */
-  background-image: url("background.png"); /* Ensure the correct path */
+  width: 100%;
+  background-image: url("../images/background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -174,7 +263,7 @@ nav.sticky .menu-btn{
   align-items: center;
   text-align: center;
 }
-/* Overlay to control background opacity */
+
 .home::before {
   content: "";
   position: absolute;
@@ -182,7 +271,7 @@ nav.sticky .menu-btn{
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.532); /* Change opacity here */
+  background: rgba(0, 0, 0, 0.532);
   z-index: 1;
 }
 
@@ -237,9 +326,7 @@ nav.sticky .menu-btn{
   background-color: #fff;
   color: #4070f4;
 }
-/* About Section Styling */
-/* Those Elements Where We Have Apply Same CSS,
- I'm Selecting Directly 'Section Tag' and 'Class'  */
+/* About Section */
 section{
   padding-top: 40px;
 }
@@ -289,7 +376,7 @@ section .title span::after{
   gap: 60px;
 }
 
-/* Image Slider Container */
+/* Image Slider Section */
 .image-slider {
   width: 375px;
   height: 400px;
@@ -298,32 +385,23 @@ section .title span::after{
   border-radius: 12px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
-
-/* Hide Radio Inputs */
 input[type="radio"] {
   display: none;
 }
-
-/* Image Track */
 .image-track {
   display: flex;
   width: 300%;
   transition: transform 0.5s ease-in-out;
 }
-
-/* Individual Slide */
 .slide {
   flex: 1;
 }
-
 .slide img {
   width: 375px;
   height: 400px;
   object-fit: cover;
   border-radius: 12px;
 }
-
-/* Radio Button Navigation */
 .navigation {
   display: flex;
   justify-content: center;
@@ -332,7 +410,6 @@ input[type="radio"] {
   bottom: 10px;
   width: 100%;
 }
-
 .navigation label {
   width: 12px;
   height: 12px;
@@ -341,12 +418,9 @@ input[type="radio"] {
   cursor: pointer;
   transition: 0.3s;
 }
-
 .navigation label:hover {
   background: #6e93f7;
 }
-
-/* Move Slides Based on Radio Button Selection */
 #slide1:checked ~ .image-track {
   transform: translateX(0%);
 }
@@ -397,7 +471,9 @@ section .button button:hover{
   background-color: #fff;
   color: #4070f4;
 }
- /* My Skills CSS */
+
+
+ /* Skill Section */
  .skills{
    background: #F0F8FF;
  }
@@ -450,8 +526,8 @@ section .button button:hover{
   font-size: 60px;
   color: #4070f4;
 }
-/* My Services CSS */
-/* Center the service icons */
+
+/* Services Section */
 .services .box .icon {
   display: flex;
   align-items: center;
@@ -512,97 +588,6 @@ section .button button:hover{
   color: #000000;
 }
 
-/* Blog Section */
-.blog-posts {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Ensure all cards have the same height */
-.card {
-  width: 300px;
-  height: 420px; /* Adjust height for uniformity */
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Ensures button stays at bottom */
-}
-
-/* Square images */
-.card img {
-  width: 100%; /* Full width */
-  height: 180px; /* Fixed height for uniformity */
-  object-fit: cover; /* Ensures images are cropped properly */
-  border-radius: 0; /* Removes circular shape */
-}
-
-/* Limit text height to prevent overflow */
-.card-text {
-  flex-grow: 1;
-  font-size: 1em;
-  color: #444;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* Show max 3 lines */
-  -webkit-box-orient: vertical;
-  text-align: center;
-}
-
-.p {
-  text-align: center;
-}
-
-/* Ensure button stays at the bottom */
-.see-more-container {
-  margin-top: auto;
-  text-align: center;
-}
-
-.see-more-btn {
-  background: #007bff;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  display: inline-block;
-  transition: background 0.3s ease;
-}
-
-.see-more-btn:hover {
-  background: #0056b3;
-}
-
-
-.button-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.go-back-btn {
-  background: #dc3545;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  display: inline-block;
-  transition: background 0.3s ease;
-}
-
-.go-back-btn:hover {
-  background: #b52b3a;
-}
-
 /* Contact Section */
 .contact {
   background: #F0F8FF;
@@ -620,8 +605,6 @@ section .button button:hover{
   font-weight: 600;
   color: #0E2431;
 }
-
-/* Contact Form */
 .contact-form {
   background: #fff;
   padding: 25px;
@@ -652,13 +635,10 @@ section .button button:hover{
   font-size: 1rem;
   outline: none;
 }
-
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: #4070f4;
 }
-
-/* Submit Button */
 .submit-btn {
   background: #4070f4;
   color: white;
@@ -670,12 +650,9 @@ section .button button:hover{
   width: 100%;
   transition: background 0.3s ease;
 }
-
 .submit-btn:hover {
   background: #305ecf;
 }
-
-/* Contact Links */
 .contact-links {
   display: flex;
   justify-content: center;
@@ -683,7 +660,6 @@ section .button button:hover{
   flex-wrap: wrap;
   margin-top: 20px;
 }
-
 .contact-link {
   display: flex;
   align-items: center;
@@ -696,14 +672,13 @@ section .button button:hover{
   transition: background 0.3s ease;
   font-family: 'Poppins', sans-serif;
 }
-
 .contact-link:hover {
   background: #305ecf;
 }
-
 .contact-link i {
   font-size: 1.2rem;
 }
+
 /* Footer CSS */
 footer{
   background: #4070f4;
@@ -723,7 +698,6 @@ footer .text span a{
 footer .text span a:hover{
   text-decoration: underline;
 }
-/* Scroll TO Top Button CSS */
 .scroll-button a{
   position: fixed;
   bottom: 20px;
@@ -736,6 +710,7 @@ footer .text span a:hover{
   box-shadow: rgba(0, 0, 0, 0.15);
   display: none;
 }
+
 /* Responsive Media Query */
 @media (max-width: 1190px) {
   section .content{
@@ -776,18 +751,16 @@ footer .text span a:hover{
 @media (max-width: 768px) {
   .menu-btn {
     position: fixed;
-    top: 150px; /* Align with logout button */
-    left: 475px; /* Move it left from the logout button */
+    top: 150px;
+    left: 475px;
     font-size: 24px;
     z-index: 1001;
     padding: 8px 15px;
   }
-
-  /* Adjust the logout button */
   .logout {
     position: fixed;
     top: 15px;
-    left: 20px; /* Keep it at the right */
+    left: 20px;
     background: #ff4d4d;
     padding: 8px 15px;
     border-radius: 6px;
