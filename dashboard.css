@@ -42,6 +42,12 @@ nav .navbar{
   align-items: center;
   margin: auto;
 }
+nav .navbar .logout{
+  padding: 5px 10px;
+  background: #1d1d1d;
+  border-radius: 10px;
+  margin-top: 10px;
+}
 nav .navbar .logo a{
   font-weight: 500;
   font-size: 35px;
@@ -768,6 +774,28 @@ footer .text span a:hover{
 }
 }
 @media (max-width: 768px) {
+  .menu-btn {
+    position: fixed;
+    top: 150px; /* Align with logout button */
+    left: 475px; /* Move it left from the logout button */
+    font-size: 24px;
+    z-index: 1001;
+    padding: 8px 15px;
+  }
+
+  /* Adjust the logout button */
+  .logout {
+    position: fixed;
+    top: 15px;
+    left: 20px; /* Keep it at the right */
+    background: #ff4d4d;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    z-index: 1002;
+  }
   .contact .content {
       width: 90%;
   }
