@@ -1,34 +1,81 @@
+<!--<script>
+  if (!localStorage.getItem("loggedInUser")) {
+    alert("You must log in first!");
+    window.location.href = "login.html";
+  }
+</script> -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <section class="project">
-        <div class="title"><span>My Projects</span></div>
-        <div class="quiz-box" id="quiz">
-          <div class="quiz-content">
-            <div class="title"><span>Interactive Quiz</span></div>
-            <p>Here you can test your knowledge </p>
-            <div class="button">
-              <a href="Interactive_Quizzes.html"><button>Take the Quiz</button></a>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>E-Hub</title>
+    <link rel="stylesheet" href="../../assets/css/project-style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="logo"><a href="../dashboard.html">E-learning</a></div>
+        <div class="nav-links">
+          <a href="profile.html" title="Profile">
+            <i class="fas fa-user-circle profile-icon"></i>
+          </a>
+          <a href="../../index.html" onclick="logoutUser(event)" class="btn btn-primary">Logout</a>
+        </div>
+      </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section class="quiz" id="quiz">
+      <div class="content">
+        <div class="title"><span>Interactive Quiz</span></div>
+        <div class="boxes-container">
+          <div class="boxes">
+
+              <div class="box">
+                <div class="image-container">
+                  <img src="../../assets/images/blog.jpg" alt="Blog | Article">
+                </div>
+                <div class="topic">Blog | Article</div>
+                <p>Building responsive, high-performance websites using modern technologies like HTML, CSS, JavaScript, and PHP to create seamless user experiences.</p>
+                <button onclick="location.href='../templates/quiz/html.html'">View Blogs</button>
+              </div>
+
+              <div class="box">
+                <div class="image-container">
+                  <img src="../../assets/images/quizzes.jpeg" alt="Quizzes">
+                </div>
+                <div class="topic">Quizzes</div>
+                <p>Creating visually striking designs, including logos, branding materials, and marketing content, that communicate your brand’s identity effectively.</p>
+                <button onclick="location.href='../templates/quiz/html.html'">Take Quiz</button>
+              </div>
+
+              <div class="box">
+                <div class="image-container">
+                  <img src="../../assets/images/figma.jpeg" alt="Figma">
+                </div>
+                <div class="topic">Figma</div>
+                <p>Creating visually striking designs, including logos, branding materials, and marketing content, that communicate your brand’s identity effectively.</p>
+                <button onclick="location.href='../templates/quiz/html.html'">View Projects</button>
+              </div>
             </div>
-          </div>
+          </div>'
         </div>
-        <div class="blog-box" id="blog">
-          <div class="content">
-            <div class="title"><span>Blog Posts | Article </span></div>
-            <p class="p">Stay Updated with the latest articles on learning and technology!</p>
-              <div id="blog-post" class="blog-posts">
-                  <!-- Blog posts will be inserted here by blog.js -->
-              </div>
-              <div class="see-more-container">
-                <a href="blogs.html" class="btn see-more-btn">See More</a>
-              </div>
-          </div>
+      </div>
+    </section>
+    <section>
+      <div class="content">
+        <div>
+
         </div>
-      </section>
+      </div>
+    </section>
+    
+    <script src="../../assets/js/blog.js"></script>
 </body>
 </html>
