@@ -14,17 +14,23 @@ function registerUser(event) {
         alert("Passwords do not match!");
         return;
     }
-    
+
     let users = JSON.parse(localStorage.getItem("users")) || [];
     if (users.some(user => user.email === email)) {
         alert("Email already registered!");
         return;
     }
-    
-    let newUser = { username, email, password, dob, gender };
+
+    // Set default avatar based on gender
+    let avatar = gender === "male"
+        ? "https://bootdey.com/img/Content/avatar/avatar1.png"
+        : "https://bootdey.com/img/Content/avatar/avatar2.png";
+
+    let newUser = { username, email, password, dob, gender, avatar };
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
     localStorage.setItem("loggedInUser", JSON.stringify(newUser));
+
     alert("Registration successful! Redirecting to login...");
     window.location.href = "login.html";
 }

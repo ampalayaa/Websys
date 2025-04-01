@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.warn("Not enough posts with images. Showing available ones.");
             }
 
-            const firstFivePosts = filteredPosts.slice(0, 6); // Get up to 5 posts
+            const firstFivePosts = filteredPosts.slice(0, 4); // Get up to 5 posts
 
             // Save shown blog IDs for the "See More" page
             localStorage.setItem("shownBlogs", JSON.stringify(firstFivePosts.map(post => post.id)));

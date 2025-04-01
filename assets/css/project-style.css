@@ -46,8 +46,59 @@ nav .navbar .logo a {
   font-weight: 500;
   font-size: 35px;
   color: #4070f4;
+  position: fixed;
+  align-items: baseline;
 }
-
+nav .navbar .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-top: 30px;
+}
+nav .navbar .menu li{
+  list-style: none;
+  margin: 0 8px;
+}
+nav .navbar .menu a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #4070f4;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+.navbar .menu a:hover {
+  color: #4070f4;
+  border-color: #4070f4;
+  background-color: rgba(64, 112, 244, 0.1);
+}
+nav.sticky .menu a{
+  color: #FFF;
+}
+nav.sticky .menu a:hover{
+  color: #0E2431;
+}
+.navbar .media-icons a{
+  color: #4070f4;
+  font-size: 18px;
+  margin: 0 6px;
+}
+nav.sticky .media-icons a{
+  color: #FFF;
+}
+/* Navbar Collapse Sidebar */
+nav .menu-btn{
+  color: #4070f4;
+}
+nav.sticky .menu-btn{
+  color: #FFF;
+}
+.navbar .menu .menu-btn{
+  color: #fff;
+}
 
 .nav-links {
   display: flex;
@@ -75,22 +126,17 @@ nav .navbar .logo a {
   text-align: center;
 }
 .profile-icon {
-  font-size: 30px;
-  color: #333;
-  transition: color 0.3s ease;
   display: block;
-  padding: 8px;
+  padding: 1px;
   padding-top: 2px;
+  margin-bottom: 2px;
   margin-right: 15px;
 }
 
-.profile-icon:hover {
-  color: #0004ff;
-}
-
-
 /* Quiz Section */
-.quiz .content .title {
+.quiz .content .title,
+.blog .content .title,
+.project .content .title{
   font-size: 45px;
   font-weight: bold;
   font-style: oblique;
@@ -150,7 +196,7 @@ nav .navbar .logo a {
   background-color: whitesmoke;
 }
 .quiz .boxes .box:hover{
-  background-color: gray;
+  background-color: rgba(108, 118, 255, 0.229);
   color: #fff;
 }
 .quiz .boxes .box .icon{
@@ -176,8 +222,8 @@ nav .navbar .logo a {
 }
 
 .quiz .boxes .box button {
-  background-color: #4070f4; /* Bright blue color */
-  color: white; /* Ensure text is visible */
+  background-color: #4070f4;
+  color: white;
   border: none;
   padding: 10px 15px;
   font-size: 16px;
@@ -185,12 +231,12 @@ nav .navbar .logo a {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 15px; /* Adds spacing from content */
+  margin-top: 15px;
 }
 
 .quiz .boxes .box button:hover {
-  background-color: #3058c5; /* Slightly darker on hover */
-  transform: scale(1.05); /* Small hover effect */
+  background-color: #3058c5;
+  transform: scale(1.05);
 }
 
 .btn {

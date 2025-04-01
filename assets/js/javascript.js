@@ -82,6 +82,8 @@ let score = 0;
 const timeLimit = 15; // seconds
 let timeLeft = timeLimit;
 let timer;
+let highScore = localStorage.getItem('highScore') ? JSON.parse(localStorage.getItem('highScore')) : { score: 0, time: '' };
+
 
 const questionEl = document.getElementById('question');
 const optionsEl = document.getElementById('options');
@@ -91,8 +93,6 @@ const quizContainer = document.getElementById('quiz-container');
 const resultContainer = document.getElementById('result-container');
 const finalScoreEl = document.getElementById('final-score');
 const restartBtn = document.getElementById('restart-btn');
-let highScore = localStorage.getItem('highScore') ? JSON.parse(localStorage.getItem('highScore')) : { score: 0, time: '' };
-
 
 function startQuiz() {
     currentQuestionIndex = 0;
@@ -160,7 +160,6 @@ function selectAnswer(selectedOption, buttonElement) {
         }
     }, 2000); // 2-second delay for feedback
 }
-
 function displayHighScore() {
     const highscoreEl = document.getElementById('highscore');
     if (highScore.score > 0) {
@@ -186,6 +185,9 @@ function endQuiz() {
     updateHighScore(); // Update high score if necessary
 
     localStorage.setItem('quizScore', score);
+}
+function updateProgress(quizName, progress) {
+    localStorage.setItem(quizName + "_progress", progress);
 }
 
 // Initialize the quiz and display the highest score

@@ -197,6 +197,10 @@ function endQuiz() {
     localStorage.setItem('quizScore', score);
 }
 
+function updateProgress(quizName, progress) {
+    localStorage.setItem(quizName + "_progress", progress);
+}
+
 // Initialize the quiz and display the highest score
 startQuiz();
 displayHighScore();

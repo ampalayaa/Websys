@@ -558,7 +558,7 @@ section .button button:hover{
 }
 
 .boxes .box:hover .icon{
-  background-color: #190087;
+  background-color: #878787;
   color: #4070f4;
 }
 .services .boxes .box:hover .topic,
