@@ -9,16 +9,17 @@
   <head>
     <meta charset="UTF-8" />
     <title>E-Hub</title>
-    <link rel="stylesheet" href="../../assets/css/project-style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/project-style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
   </head>
   <body>
     <nav>
       <div class="navbar">
         <div class="logo"><a href="../dashboard.html">E-learning</a></div>
         <div class="nav-links">
-          <a href="profile.html" title="Profile">
+          <a href="../profile.html" title="Profile">
             <i class="fas fa-user-circle profile-icon"></i>
           </a>
           <a href="../../index.html" onclick="logoutUser(event)" class="btn btn-primary">Logout</a>
@@ -33,45 +34,71 @@
     <br>
     <section class="quiz" id="quiz">
       <div class="content">
-        <div class="title"><span>Interactive Quiz</span></div>
+        <div class="title"><span>Interactive Quizzes</span></div>
+        <p class="p">It's you vs your brain</p>
         <div class="boxes-container">
           <div class="boxes">
 
               <div class="box">
                 <div class="image-container">
-                  <img src="../../assets/images/blog.jpg" alt="Blog | Article">
+                  <img src="../../assets/images/blog.jpg" alt="css & html">
                 </div>
-                <div class="topic">Blog | Article</div>
+                <div class="topic">HTML and CSS Quiz</div>
                 <p>Building responsive, high-performance websites using modern technologies like HTML, CSS, JavaScript, and PHP to create seamless user experiences.</p>
-                <button onclick="location.href='../templates/quiz/html.html'">View Blogs</button>
+                <button onclick="location.href='../../templates/quiz/html.html'">Take Quiz</button>
               </div>
 
               <div class="box">
                 <div class="image-container">
-                  <img src="../../assets/images/quizzes.jpeg" alt="Quizzes">
+                  <img src="../../assets/images/quizzes.jpeg" alt="javascript">
                 </div>
-                <div class="topic">Quizzes</div>
+                <div class="topic">JavaScript Quiz</div>
                 <p>Creating visually striking designs, including logos, branding materials, and marketing content, that communicate your brand’s identity effectively.</p>
-                <button onclick="location.href='../templates/quiz/html.html'">Take Quiz</button>
+                <button onclick="location.href='../../templates/quiz/javascript.html'">Take Quiz</button>
               </div>
 
               <div class="box">
                 <div class="image-container">
                   <img src="../../assets/images/figma.jpeg" alt="Figma">
                 </div>
-                <div class="topic">Figma</div>
+                <div class="topic">Database Quiz</div>
                 <p>Creating visually striking designs, including logos, branding materials, and marketing content, that communicate your brand’s identity effectively.</p>
-                <button onclick="location.href='../templates/quiz/html.html'">View Projects</button>
+                <button onclick="location.href='../templates/quiz/html.html'">Take Quiz</button>
               </div>
             </div>
           </div>'
         </div>
       </div>
     </section>
-    <section>
+    
+    <section id="blog" class="blog">
       <div class="content">
-        <div>
+        <div class="title"><span>Blog Posts | Article </span></div>
+        <p class="p">Stay Updated with the latest articles on learning and technology!</p>
+          <div id="blog-post" class="blog-posts">
+              <!-- Blog posts will be inserted here by blog.js -->
+          </div>
+      </div>
+      <button onclick="location.href='blogs.html'" class="btn btn-secondary"> Sea More Blogs </button>
+    </section>
 
+    <section class="quiz" id="quiz">
+      <div class="content">
+        <div class="title"><span>Design Projects</span></div>
+        <p class="p">As I explore this </p>
+        <div class="boxes-container">
+          <div class="boxes">
+
+              <div class="box">
+                <div class="image-container">
+                  <img src="../../assets/images/blog.jpg" alt="css & html">
+                </div>
+                <div class="topic">HTML and CSS Quiz</div>
+                <p>Building responsive, high-performance websites using modern technologies like HTML, CSS, JavaScript, and PHP to create seamless user experiences.</p>
+                <button onclick="location.href='../../templates/quiz/html.html'">Take Quiz</button>
+              </div>
+            </div>
+          </div>'
         </div>
       </div>
     </section>

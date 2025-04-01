@@ -43,9 +43,8 @@ body {
     justify-content: center;
     text-align: left;
     padding: 50px 20px;
-    background-image: url("background.png");
+    background-image: url("../images/background.png");
     background-size: contain;
-    background-color: #004d00;
 }
 
 .hero-section h1 {

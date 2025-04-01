@@ -1,5 +1,5 @@
 body {
-    background: url(../images/oceann.jpg) center/cover no-repeat fixed;
+    background-color: #ffffff;
     position: relative; /* Allows overlay positioning */
 }
 
