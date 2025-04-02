@@ -1,6 +1,5 @@
 // auth.js - User Registration
 
-// Register a new user
 function registerUser(event) {
     event.preventDefault();
     let username = document.getElementById("username").value;
@@ -8,7 +7,12 @@ function registerUser(event) {
     let password = document.getElementById("password").value;
     let confirmPassword = document.getElementById("confirm-password").value;
     let dob = document.getElementById("dob").value;
-    let gender = document.querySelector("input[name='gender']:checked").value;
+    let gender = document.querySelector("input[name='gender']:checked")?.value;
+
+    if (!gender) {
+        alert("Please select a gender.");
+        return;
+    }
 
     if (password !== confirmPassword) {
         alert("Passwords do not match!");
@@ -21,7 +25,6 @@ function registerUser(event) {
         return;
     }
 
-    // Set default avatar based on gender
     let avatar = gender === "male"
         ? "https://bootdey.com/img/Content/avatar/avatar1.png"
         : "https://bootdey.com/img/Content/avatar/avatar2.png";
